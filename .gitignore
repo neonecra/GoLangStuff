@@ -9,3 +9,8 @@
 !.vscode/extensions.json 
 
 # End
+
+### VSC history plugin ###
+.history/*
+
+# End
