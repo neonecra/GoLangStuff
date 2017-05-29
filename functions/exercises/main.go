@@ -58,18 +58,17 @@ func main() {
 
 	// Find a problem at projecteuler.net then create the solution. Add a comment beneath your solution that includes a description of the problem. Upload your solution to github. Tweet me a link to your solution.
 	fmt.Println("\nExercise 2-6")
-	fibCount := func(x int, y int) {
-		if y+x == 0 {
-			x := 1
-			y := 2
-		}
-		if 4000000 < x {
-			return
-		}
-		fmt.Println(x + y) // 3
-		if x > y {
-			fibCount(y, x+y)
+	// fibCount - use two fibonacci numbers, followed by limit
+	fibCount := func(x int, y int, max int) {
+		fmt.Println(x)
+		fmt.Println(y)
+		for max > (x + y) {
+			combination := x + y
+			fmt.Println(combination)
+			x = y
+			y = combination
 		}
 	}
+	fibCount(1, 2, 4000000)
 
 }
